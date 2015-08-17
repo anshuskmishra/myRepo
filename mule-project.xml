@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mule-project xmlns="http://www.mulesoft.com/tooling/project" runtimeId="org.mule.tooling.server.3.7.0.ee" schemaVersion="3.5.0.0">
+    <name>SFTP</name>
+    <description></description>
+    <muleExtension name="Mule Client" qualifier="org.mule.tooling.ui.contribution.mclient.3.5.0"/>
+    <muleExtension name="FTP Server" qualifier="org.mule.tooling.ui.contribution.ftpserver.3.4.0"/>
+</mule-project>

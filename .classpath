@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/*.java" kind="src" path="mappings"/>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/app"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry excluding="**/*.java" kind="src" output="target/test-classes" path="src/test/munit"/>
+	<classpathentry excluding="**/*.java" kind="src" output="target/test-classes" path="src/test/resources"/>
+	<classpathentry kind="con" path="MULE_RUNTIME"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="M2_REPO/bouncycastle/bcprov-jdk14/139/bcprov-jdk14-139.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/ftpserver/ftplet-api/1.0.6/ftplet-api-1.0.6.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/ftpserver/ftpserver-core/1.0.2/ftpserver-core-1.0.2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/fusesource/jansi/jansi/1.8/jansi-1.8.jar"/>
+	<classpathentry kind="var" path="M2_REPO/jdom/jdom/1.0/jdom-1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/github/jnr/jffi/1.2.5/jffi-1.2.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/4.8.2/junit-4.8.2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/mina/mina-core/2.0.2/mina-core-2.0.2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mockito/mockito-all/1.8.2/mockito-all-1.8.2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mockito/mockito-core/1.9.5/mockito-core-1.9.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mule/tools/devkit/mule-devkit-annotations/3.5.3/mule-devkit-annotations-3.5.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mule/modules/mule-interceptor-module/3.7.0-RC2/mule-interceptor-module-3.7.0-RC2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mule/munit/munit-assert/3.7.0-RC2/munit-assert-3.7.0-RC2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mule/munit/munit-common/3.7.0-RC2/munit-common-3.7.0-RC2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mule/munit/utils/munit-ftpserver-module/3.7.0-RC3-SNAPSHOT/munit-ftpserver-module-3.7.0-RC3-SNAPSHOT.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mule/munit/utils/munit-mclient-module/3.7.0-RC3-SNAPSHOT/munit-mclient-module-3.7.0-RC3-SNAPSHOT.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mule/munit/munit-mock/3.7.0-RC2/munit-mock-3.7.0-RC2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/mule/munit/munit-runner/3.7.0-RC2/munit-runner-3.7.0-RC2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/objenesis/objenesis/1.0/objenesis-1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/oauth/signpost/signpost-core/1.2.1.1/signpost-core-1.2.1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/sshd/sshd-core/0.6.0/sshd-core-0.6.0.jar"/>
+	<classpathentry kind="con" path="MULE_LIB/Mule Client/org.mule.tooling.ui.contribution.mclient.3.5.0"/>
+	<classpathentry kind="con" path="MULE_LIB/FTP Server/org.mule.tooling.ui.contribution.ftpserver.3.4.0"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

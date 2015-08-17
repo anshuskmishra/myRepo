@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:sftp="http://www.mulesoft.org/schema/mule/sftp" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.7.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/sftp http://www.mulesoft.org/schema/mule/sftp/current/mule-sftp.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+    <!-- <sftp:connector name="SFTP" validateConnections="true" autoDelete="false" doc:name="SFTP"/>
+    <ftp:connector name="FTP" pollingFrequency="1000" validateConnections="true" moveToDirectory="/resources" moveToPattern="pom.xml" outputPattern="pom.xml" doc:name="FTP"/> -->
+    <sftp:connector name="SFTP1" outputPattern="#[message.inboundProperties.originalFilename]" validateConnections="true"  autoDelete="false" doc:name="SFTP" pollingFrequency="30000"/>
+    <sftp:connector name="SFTP" validateConnections="true" pollingFrequency="30000" autoDelete="false" doc:name="SFTP"/>
+<!-- <flow name="ftp2file">
+        <sftp:inbound-endpoint  host="localhost" port="21" path="/"  responseTimeout="10000" pollingFrequency="30000" doc:name="SFTP" password="admin" user="admin">
+        
+<file:filename-wildcard-filter pattern="*.json"/>
+</sftp:inbound-endpoint>
+        
+        <sftp:outbound-endpoint exchange-pattern="one-way" host="localhost" port="21" responseTimeout="10000" doc:name="SFTP"  outputPattern="test.json" path="/output"/>
+    </flow> -->
+   <!--  <flow name="sftpFlow">
+        <ftp:inbound-endpoint host="localhost" port="21" path="/resources" user="admin" password="admin" responseTimeout="10000" doc:name="FTP" />
+        <byte-array-to-string-transformer doc:name="Byte Array to String"/>
+        <logger level="INFO" doc:name="Logger" message="Testing: #[payload]"/>
+        <string-to-byte-array-transformer doc:name="String to Byte Array"/>
+        <ftp:outbound-endpoint host="localhost" port="21" path="/java" user="admin" password="admin" connector-ref="FTP" responseTimeout="10000" doc:name="FTP"/>
+    </flow> -->
+    <flow name="sftpFlow1">
+        <sftp:inbound-endpoint host="localhost" port="995" path="/resources" user="admin" password="admin" responseTimeout="10000" doc:name="SFTP" connector-ref="SFTP" />
+        <logger message="Reading File: #[message.inboundProperties.originalFilename]" level="INFO" doc:name="Logger"/>
+        <byte-array-to-string-transformer doc:name="Byte Array to String"/>
+        <logger level="INFO" doc:name="Logger" message="File Content : #[payload]"/>
+        <string-to-byte-array-transformer doc:name="String to Byte Array"/>
+        <sftp:outbound-endpoint exchange-pattern="one-way" connector-ref="SFTP1" host="localhost" port="995" path="/java" user="admin" password="admin" responseTimeout="10000" doc:name="SFTP"/>
+         <!-- <catch-exception-strategy when="#[exception.causedBy(java.io.IOException)]" doc:name="Catch Exception Strategy">
+            <logger message="Duplicacy Exception" level="INFO" doc:name="Logger"/>
+            <set-payload value="Cannot process the duplicate file" doc:name="Set Payload"/>
+        </catch-exception-strategy> -->
+    </flow>
+</mule>

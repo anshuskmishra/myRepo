@@ -1,0 +1,39 @@
+Amtrrak Acceptable Use Policy_Kevin Haas.pdf	Revert, AV Version
+Amtrak Acceptable use policy pponna.pdf		Less Content (some others also)
+IT Access Form_Joyita Sikder.jpg		Role Missing
+Amtrak Acceptable Use Policy_AHMED.pdf		AV version Missing,Signature?
+Amtrak Acceptable Use Policy_ScottStrother.pdf	SAP ID
+IT_Access_Form_Abhik_Das.pdf			Title and Role
+IT_Access_Form_Joseph_Bartell.pdf		AV Version
+IT_Access_Form_Ritesh_Bajaj.pdf			AV Brand and Version
+
+
+
+
+
+Mule Training,Cert,
+Documents reading
+Meeting
+DD Connect
+Code and Ethics
+CE Baseline Assessment
+Groovy Script
+Mule Advance topics-Batch etc./Tough Orchestartion?, MUnit
+Deloitte Mandatory Trainings
+Townhalls
+Amtrak/Acela vdos
+
+
+Recordings/Meeting Time?
+At&TCalling?
+
+
+SOW
+200+requirements: PDP Vendor Questionarrie
+Next week:Few scenarios, POCs (next tue), Someone from the team will contact, tmrw go thru these docs
+
+
+
+ola:
+anshukkr
+anshu5413

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <title>Google   Multiple Markers</title> 
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+</head> 
+<body>
+  
+  
+  <script>
+  function codeAddress() {
+	  var side_bar_html = ""; 
+
+
+    // Define your locations: HTML content for the info window, latitude, longitude
+    var locations = [
+      ['<h4>Sheetal Grocery Store</h4>', 12.917213, 77.622769],
+      ['<h4>Ram Groceries</h4>',  12.947130, 77.680706],
+      ['<h4>Shyam General Store</h4>', 12.959172, 77.697419],
+      ['<h4>Ramdas Store</h4>', 12.908240, 77.607409],
+      
+    ];
+    
+    // Setup the different icons and shadows
+    var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
+    var R = 6371;
+    var icons = [
+      iconURLPrefix + 'red-dot.png',
+      iconURLPrefix + 'green-dot.png',
+      iconURLPrefix + 'blue-dot.png',
+      iconURLPrefix + 'orange-dot.png',
+      iconURLPrefix + 'purple-dot.png',
+      iconURLPrefix + 'pink-dot.png',      
+      iconURLPrefix + 'yellow-dot.png'
+    ]
+    var iconsLength = icons.length;
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(-37.92, 151.25),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,
+      streetViewControl: false,
+      panControl: false,
+      zoomControlOptions: {
+         position: google.maps.ControlPosition.LEFT_BOTTOM
+      }
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      maxWidth: 160
+    });
+
+    var markers = new Array();
+    
+    var iconCounter = 0;
+    
+    // Add the markers and infowindows to the map
+    for (var i = 0; i < locations.length; i++) {  
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon: icons[iconCounter]
+      });
+
+      markers.push(marker);
+      // ****
+      //side_bar_html += '<a href="javascript:myclick(' + (markers.length-1) + ')">' + name + '<\/a><br>';
+      
+   		// ****
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+      
+      iconCounter++;
+      // We only have a limited number of possible icon colors, so we may have to restart the counter
+      if(iconCounter >= iconsLength) {
+      	iconCounter = 0;
+      }
+    }
+    
+  
+    
+     /*  var bounds = new google.maps.LatLngBounds();     
+      for (var i = 0; i < markers.length; i++) {  
+				bounds.extend(markers[i].position);
+      }    
+      map.fitBounds(bounds);   
+    google.maps.event.addDomListener(window, 'load', initialize); */
+    
+    
+    
+    
+    
+    
+    //STRT
+    
+    
+    var circle = null;
+	var radius = parseInt(document.getElementById('radius').value,10) * 1000;
+
+	circle = new google.maps.Circle({
+		center : new google.maps.LatLng(12.947130, 77.680706),
+		radius : radius,
+		fillOpacity : 0.35,
+		fillColor : "#FF0000",
+		map : map
+	});
+
+	var bounds = new google.maps.LatLngBounds();
+	var foundMarkers = 0;
+
+	for (var i = 0; i < markers.length; i++) {
+		if (google.maps.geometry.spherical.computeDistanceBetween(
+				markers[i].getPosition(), new google.maps.LatLng(12.947130, 77.680706)) < radius) {
+			bounds.extend(markers[i].getPosition())
+			markers[i].setMap(map);
+			// ****
+			side_bar_html += '<a href="javascript:myclick(' + i	+ ')">' + markers[i].title + '<\/a><br>';
+			// ****
+			foundMarkers++;
+		} else {
+			markers[i].setMap(null);
+		}
+
+	}
+	// ****
+	document.getElementById("side_bar").innerHTML = side_bar_html;
+	
+	// ****
+	if (foundMarkers > 0) {
+		map.fitBounds(bounds);
+		
+	} else {
+		map.fitBounds(circle.getBounds());
+	}
+    
+	
+	//STOP	
+    } 
+  function myclick(i) {
+  	  google.maps.event.trigger(markers[i], "click");
+  	}
+		</script>
+	<div id="map" style="width: 800px; height: 600px;">
+	
+	</div>
+	<table border="1">
+		<tr>
+			<!-- <td> 
+           <div id="map_canvas" style="width: 550px; height: 450px"></div> 
+        </td>   -->
+			<td valign="right">
+				<div id="side_bar" style="width: 1500px; height: 80px; text-decoration: underline; color: #4444ff; overflow: auto;"></div>
+			</td>
+		</tr>
+	</table>
+	<div>
+      <input id="address" type="textbox" value="Bangalore">
+      <input type="button" value="Search" onclick="codeAddress()"><br>
+      <input id="radius" type="textbox" value="50"> kilometers
+    </div> 
+  
+</body>
+</html>

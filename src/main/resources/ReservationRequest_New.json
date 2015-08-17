@@ -1,0 +1,213 @@
+{
+    "trip": {
+        "transport": {
+            "productCode": "TDPTransport",
+            "transportOption": "One Way",
+            "deliveryCode": "D001",
+			"Action": "NN",
+			"OverrideCode": "1",
+            "stops": [
+                {
+                    "sourceStation": "WAS",
+                    "departureDate": "20150810",
+                    "destinationStation": "NYP"
+                }
+            ],
+            "segments": [
+                {
+					"SegmentNumber": "1",
+                    "transportItemNo": "0001",
+                    "transportType": "train",
+                    "transportNo": "510",
+                    "transportName": "NE Regional Express",
+                    "sourceStation": "WAS",
+                    "destinationStation": "NYP",
+					"CarrierCode": "12",
+					"HoldDate": "2015-08-20",
+					"HoldText": "hold",
+					"HoldLimit": "true",
+					"accomodationInfo": [
+                        {
+							"RBDCode": "Y",
+							"RBDCount": "2",
+							"TariffType": "C",
+                            "accType": "Seat",
+                            "accClass": "Business",
+                            "passengerNo": "P001",
+                            "FareRule": "PTP",
+                            "FareFamily": "Flexible",
+							"FarePlan": "DOF1",
+							"DiscountType": "H123",
+							"DiscountCode": "H123",
+                            "Price": 200
+                        },
+                        {
+							"RBDCode": "Y",
+							"RBDCount": "2",
+							"TariffType": "C",
+                            "accType": "Seat",
+                            "accClass": "Coach",
+                            "passengerNo": "P002",
+                            "FareFamily": "Flexible",
+                            "FareRule": "PTP",
+							"FarePlan": "DOF1",
+							"DiscountType": "H123",
+							"DiscountCode": "H123",
+                            "price": 0
+                        },
+                        {
+							"RBDCode": "Y",
+							"RBDCount": "2",
+							"TariffType": "C",
+						    "accType": "Seat",
+                            "accClass": "Coach",
+                            "passengerNo": "P003",
+                            "FareFamily": "Flexible",
+                            "FareRule": "PTP",
+							"FarePlan": "DOF1",
+							"DiscountType": "H123",
+							"DiscountCode": "H123",
+                            "price": 100
+                        }
+                    ]
+                }
+            ]
+        },
+        "accomodation": {
+            "productCode": "TDPAccomodation",
+            "loadging": [
+                {
+					"RoomNum": "123"
+				}
+            ],
+            "vendor": "Mazda"
+        },
+        "rentalCar": {
+            "productCode": "TDPRentalCar",
+            "loadging": [
+                {
+					"CarNum": "1234"
+				}
+            ],
+            "vendor": "Mayfair"
+        },
+        "passenger": [
+            {
+                "PrimaryPassenger":"true",
+				"AmtrakID": "11948120",
+				"PAXType": "F",
+				"passengerNo": "P001",
+                "agrNo": "A0001",
+                "email": "abc@xyz.com",
+                "firstName": "abc",
+                "lastName": "mno",
+                "gender": "M",
+                "category": "Adult",
+                "citizenship": "USA",
+                "idCardType": "DL",
+                "idCardNo": "XYZ00000001",
+                "idCardExpDate": "20151224"				
+            },
+            {
+			    "PrimaryPassenger:"false",
+				"AmtrakID": "11948120",
+				"PAXType": "H",
+                "passengerNo": "P002",
+                "agrNo": "A0001",
+                "email": "abc@xyz.com",
+                "firstName": "jkl",
+                "lastName": "dfg",
+                "gender": "F",
+                "category": "Infant",
+                "citizenship": "USA",
+                "idCardType": "SI",
+                "idCardNo": "SI00000001",
+                "idCardExpDate": "20151120"
+            },
+            {
+			    "PrimaryPassenger:"false",
+			    "AmtrakID": "11948120",
+                "PAXType": "F",
+				"passengerNo": "P003",
+                "agrNo": "A0001",
+                "email": "abc@xyz.com",
+                "firstName": "erf",
+                "lastName": "dfr",
+                "gender": "F",
+                "category": "Adult",
+                "citizenship": "USA",
+                "idCardType": "Passport",
+                "idCardNo": "PP00000001",
+                "idCardExpDate": "20180221"
+            }
+        ],
+        "paymentInfo": [
+            {
+                "paymentNo": "0001",
+                "paymentType": "card",
+                "paymentToken": "jsoiodf809dffiuuye-sdjjhe67wei330",
+                "voucherNo": "",
+                "maxAllowedAmount": 1000,
+				"EvoucherRefund": "true",				
+				"CVV": "123"
+            },
+            {
+                "paymentNo": "0002",
+                "paymentType": "voucher",
+                "paymentToken": "",
+                "voucherNo": "V001",
+                "maxAllowedAmount": 200,
+				"EvoucherRefund": "true",				
+				"CVV": ""
+            }
+        ],
+        "deliveryInfo": [
+            {
+                "deliveryNo": "D001",
+                "deliveryType": "email",
+                "email": "abc@xyz.com",
+				"AddressType": "",
+                "addressLine1": "",
+                "addressLine2": "",
+                "city": "",
+                "state": "",
+                "country": "",
+                "zip": ""
+			},
+            {
+                "deliveryNo": "D002",
+                "deliveryType": "post",  
+                "email": "abc@xyz.com",				
+                "AddressType": "B",
+                "addressLine1": "Door no-380",
+                "addressLine2": "380 W Lake St",
+                "city": "Chicago",
+                "state": "IL",
+                "country": "US",
+                "zip": "60640"
+            },
+			{
+                "deliveryNo": "D002",
+                "deliveryType": "post",
+				"email": "abc@xyz.com",
+                "AddressType": "M",				
+                "addressLine1": "5400 N",
+                "addressLine2": "Lakewood Avenue",
+                "city": "Chicago",
+                "state": "IL",
+                "country": "US",
+                "zip": "60640"
+            }
+        ],
+		"ContactDetails": [
+			{
+				"AreaCode":"202",
+				"Number":"9064211",
+				"Extension":"3123",
+				"ContactText": "ContactText",
+				"ContactType": "A",
+				"PhoneType": "B"
+			}
+		]
+    }
+}
