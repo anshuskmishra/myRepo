@@ -238,7 +238,7 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>central/id>
+            <id>default/id>
             <name>mulesoft release repository</name>
             <layout>default</layout>
             <url>http://repository.mulesoft.org/releases/</url>
