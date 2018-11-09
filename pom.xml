@@ -131,6 +131,11 @@
 			<version>${mule.version}</version>
 			<scope>provided</scope>
 		</dependency>
+<dependency>
+    <groupId>org.mule.munit.tools</groupId>
+    <artifactId>munit-maven-plugin</artifactId>
+    <version>3.7.0-RC2</version>
+</dependency>
 		<dependency>
         	<groupId>com.mulesoft.muleesb.transports</groupId>
 			<artifactId>mule-transport-jms-ee</artifactId>
