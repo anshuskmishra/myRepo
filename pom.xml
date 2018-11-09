@@ -74,7 +74,7 @@
 		<plugin>
                 <groupId>org.mule.munit.tools</groupId>
                 <artifactId>munit-maven-plugin</artifactId>
-                <version>${munit.version}</version>
+                <version>3.7.0-RC2</version>
                 <executions>
                     <execution>
                         <id>test</id>
@@ -171,31 +171,31 @@
 	<dependency>
             <groupId>org.mule.munit</groupId>
             <artifactId>munit-assert</artifactId>
-            <version>${munit.version}</version>
+            <version>3.7.0-RC2</version>
             <scope>test</scope>
         </dependency>
     <dependency>
             <groupId>org.mule.munit</groupId>
             <artifactId>munit-mock</artifactId>
-            <version>${munit.version}</version>
+            <version>3.7.0-RC2</version>
             <scope>test</scope>
         </dependency>
     <dependency>
             <groupId>org.mule.munit</groupId>
             <artifactId>munit-common</artifactId>
-            <version>${munit.version}</version>
+            <version>3.7.0-RC2</version>
             <scope>test</scope>
         </dependency>
     <dependency>
             <groupId>org.mule.munit</groupId>
             <artifactId>munit-runner</artifactId>
-            <version>${munit.version}</version>
+            <version>3.7.0-RC2</version>
             <scope>test</scope>
         </dependency>
     <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-interceptor-module</artifactId>
-            <version>${munit.version}</version>
+            <version>3.7.0-RC2</version>
             <scope>test</scope>
         </dependency>
     <dependency>
