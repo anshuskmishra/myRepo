@@ -242,5 +242,14 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+	
+	
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>Neetakshis-MacBook-Pro.local-releases</name>
+			<url>http://localhost:8081/artifactory/libs-release</url>
+		</repository>
+	</distributionManagement>
 
 </project>
