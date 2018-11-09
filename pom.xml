@@ -22,7 +22,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
-				<version>${mule.tools.version}</version>
+				<version>1.1</version>
 				<extensions>true</extensions>
 				<configuration>
                     <copyToAppsDirectory>true</copyToAppsDirectory>
@@ -102,33 +102,33 @@
 		<dependency>
         	<groupId>com.mulesoft.muleesb</groupId>
 			<artifactId>mule-core-ee</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Xml configuration -->
 		<dependency>
 			<groupId>com.mulesoft.muleesb.modules</groupId>
 			<artifactId>mule-module-spring-config-ee</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Mule Transports -->
 		<dependency>
 			<groupId>org.mule.transports</groupId>
 			<artifactId>mule-transport-file</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.mule.transports</groupId>
 			<artifactId>mule-transport-http</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
         	<groupId>com.mulesoft.muleesb.transports</groupId>
 			<artifactId>mule-transport-jdbc-ee</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 <dependency>
@@ -139,13 +139,13 @@
 		<dependency>
         	<groupId>com.mulesoft.muleesb.transports</groupId>
 			<artifactId>mule-transport-jms-ee</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.mule.transports</groupId>
 			<artifactId>mule-transport-vm</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Mule Modules -->
@@ -158,14 +158,14 @@
 		<dependency>
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-module-xml</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- for testing -->
 		<dependency>
 			<groupId>org.mule.tests</groupId>
 			<artifactId>mule-tests-functional</artifactId>
-			<version>${mule.version}</version>
+			<version>3.7.0</version>
 			<scope>test</scope>
 		</dependency>
 	<dependency>
@@ -195,7 +195,7 @@
     <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-interceptor-module</artifactId>
-            <version>3.7.0-RC2</version>
+            <version>3.7.0</version>
             <scope>test</scope>
         </dependency>
     <dependency>
@@ -211,7 +211,7 @@
     <dependency>
             <groupId>org.mule.transports</groupId>
             <artifactId>mule-transport-sftp</artifactId>
-            <version>${mule.version}</version>
+            <version>3.7.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
