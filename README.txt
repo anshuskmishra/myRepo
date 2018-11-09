@@ -1,4 +1,4 @@
-Welcome to SFTP Project 
+Welcome to SFTP Project ....
 =======================================================================
 A mule application to read files from a read only SFTP folder. The application should poll every 5 minutes and write back to another folder.
 
