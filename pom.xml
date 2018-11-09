@@ -201,12 +201,12 @@
     <dependency>
             <groupId>org.mule.munit.utils</groupId>
             <artifactId>munit-mclient-module</artifactId>
-            <version>3.7.0-RC3-SNAPSHOT</version>
+            <version>3.7.0-RC2-SNAPSHOT</version>
         </dependency>
     <dependency>
             <groupId>org.mule.munit.utils</groupId>
             <artifactId>munit-ftpserver-module</artifactId>
-            <version>3.7.0-RC3-SNAPSHOT</version>
+            <version>3.7.0-RC2-SNAPSHOT</version>
         </dependency>
     <dependency>
             <groupId>org.mule.transports</groupId>
