@@ -246,7 +246,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
-
+  </pluginRepositories>
 	
 	
 	<distributionManagement>
